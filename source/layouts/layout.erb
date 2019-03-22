@@ -10,14 +10,14 @@
 
     <meta property="og:title" content="<%= current_page.data.title || 'Middleman' %>" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="<%= current_page.url %>" />
+    <meta property="og:url" content="<%= get_url(current_page) %>" />
     <meta property="og:image" content="<%= current_page.url %>/images/1200x630.png" />
     <meta property="og:site_name" content="Static web demo" />
     <meta property="og:description" content="This page is sample." />
 
     <meta name="twitter:description" content="This page is sample.">
     <meta name="twitter:title" content="<%= current_page.data.title || 'Middleman' %>">
-    <meta name="twitter:url" content="<%= current_page.url %>">
+    <meta name="twitter:url" content="<%= get_url(current_page) %>">
     <meta name="twitter:card" content="summary">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
