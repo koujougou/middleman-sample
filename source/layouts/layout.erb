@@ -8,7 +8,7 @@
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title || "Middleman" %></title>
 
-    <meta property="og:title" content="Static web sample page" />
+    <meta property="og:title" content="<%= current_page.data.title || 'Middleman' %>" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://keen-davinci-170361.netlify.com/" />
     <meta property="og:image" content="https://keen-davinci-170361.netlify.com/images/1200x630.png" />
@@ -16,7 +16,7 @@
     <meta property="og:description" content="This page is sample." />
 
     <meta name="twitter:description" content="This page is sample.">
-    <meta name="twitter:title" content="Static web sample page">
+    <meta name="twitter:title" content="<%= current_page.data.title || 'Middleman' %>">
     <meta name="twitter:url" content="https://keen-davinci-170361.netlify.com/">
     <meta name="twitter:card" content="summary">
 
