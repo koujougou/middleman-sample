@@ -23,15 +23,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
     <%= stylesheet_link_tag "main" %>
+    <% if content_for?(:css) %>
+      <%= yield_content :css %>
+    <% end %>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-    <%#= javascript_include_tag "site" %>
+    <% if content_for?(:header_js) %>
+      <%= yield_content :header_js %>
+    <% end %>
   </head>
   <body>
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v3.2"></script>
 
     <%= yield %>
+
+    <% if content_for?(:body_js) %>
+      <%= yield_content :body_js %>
+    <% end %>
   </body>
 </html>
