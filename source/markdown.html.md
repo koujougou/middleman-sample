@@ -1,5 +1,5 @@
 ---
-title: Middleman Success for your inquiry
+title: Markdown Sample
 ---
 
 # markdown
